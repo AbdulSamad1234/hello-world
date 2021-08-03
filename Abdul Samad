@@ -1,0 +1,24 @@
+# Intialize the pygame
+pygame.init()
+# create the screen
+screen = pygame.display.set_mode((1000, 800))
+
+# Title and icon
+pygame.display.set_caption("Champions 21")
+icon = pygame.image.load("cricket-player-with-bat.png")
+pygame.display.set_icon(icon)
+# PLayer
+PlayerIMG = pygame.image.load("stretching-exercises (1).png")
+PlayerX = 100
+PlayerY = 300
+def  Player():
+    screen.blit(PlayerIMG, (PlayerX, PlayerY))
+running = True
+while running:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+    # RGB_ Red,Green,Blue
+    screen.fill((250, 0, 0))
+    Player()
+    pygame.display.update()
